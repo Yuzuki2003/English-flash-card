@@ -19,6 +19,7 @@ public class QuestionActivity extends AppCompatActivity {
     TextView textView;
     Random random = new Random();
 
+    // はじめてのコメント
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
