@@ -10,7 +10,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     MyListAdapter mAdapter;
     List<Question> mList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

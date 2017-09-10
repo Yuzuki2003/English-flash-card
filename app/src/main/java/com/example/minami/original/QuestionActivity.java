@@ -18,7 +18,7 @@ import java.util.Random;
 public class QuestionActivity extends AppCompatActivity {
     TextView textView;
     Random random = new Random();
-
+    int randomnumber = random.nextInt(10)+1;
     // はじめてのコメント
 
     @Override
@@ -28,7 +28,7 @@ public class QuestionActivity extends AppCompatActivity {
         textView =  (TextView)findViewById(R.id.textView);
 
         List<Question> mlist = Question.listAll(Question.class);
-            int r = random.nextInt(10);
+        int r = random.nextInt(10);
             Log.d("Number", "Question" + r);
 
         setDummyDate();
