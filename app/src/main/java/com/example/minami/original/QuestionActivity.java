@@ -18,7 +18,11 @@ import java.util.Random;
 public class QuestionActivity extends AppCompatActivity {
     TextView textView;
     Random random = new Random();
-    int randomnumber = random.nextInt(10)+1;
+    MyListAdapter mAdapter;
+    ListView mListView;
+    int randomNumber = random.nextInt(10);
+
+
     // はじめてのコメント
 
     @Override
@@ -26,10 +30,17 @@ public class QuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
         textView =  (TextView)findViewById(R.id.textView);
+        
+        int randomNumber;
+        for(int i = 1; i <=10; i = i+1)
+
+        mAdapter = new MyListAdapter(this, R.layout.question_card);
+        mListView.setAdapter(mAdapter);
+        mListView.setEmptyView(findViewById(R.id.empty_view));
 
         List<Question> mlist = Question.listAll(Question.class);
-        int r = random.nextInt(10);
-            Log.d("Number", "Question" + r);
+        mAdapter.addAll(mlist);
+        Log.d("Number", "Question" + randomNumber);
 
         setDummyDate();
         /*
