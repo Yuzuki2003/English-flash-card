@@ -47,6 +47,11 @@
             tools:text="完了"
             android:onClick="complete" />
 
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.08" />
+
     </LinearLayout>
 
 </RelativeLayout>

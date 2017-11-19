@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
@@ -20,7 +21,7 @@ public class QuestionActivity extends AppCompatActivity {
     Random random = new Random();
     MyListAdapter mAdapter;
     ListView mListView;
-    int randomNumber = random.nextInt(10);
+    int randomNumber;
 
 
     // はじめてのコメント
@@ -30,17 +31,18 @@ public class QuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
         textView =  (TextView)findViewById(R.id.textView);
-        
-        int randomNumber;
-        for(int i = 1; i <=10; i = i+1)
-
-        mAdapter = new MyListAdapter(this, R.layout.question_card);
-        mListView.setAdapter(mAdapter);
-        mListView.setEmptyView(findViewById(R.id.empty_view));
 
         List<Question> mlist = Question.listAll(Question.class);
         mAdapter.addAll(mlist);
-        Log.d("Number", "Question" + randomNumber);
+
+        List<Question> array = new ArrayList<Question>();
+
+        for(int i = 0; i <= 9; i = i+1) {
+            randomNumber = random.nextInt(mlist.size());
+            array.add(i, mlist.get(randomNumber));
+        }
+        textView.setText(String.valueOf(randomNumber));
+
 
         setDummyDate();
         /*
