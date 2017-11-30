@@ -32,7 +32,10 @@ public class QuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_question);
         textView =  (TextView)findViewById(R.id.textView);
 
+        setDummyDate();
+
         List<Question> mlist = Question.listAll(Question.class);
+        mAdapter = new MyListAdapter(getApplicationContext(), R.layout.question_list_item);
         mAdapter.addAll(mlist);
 
         List<Question> array = new ArrayList<Question>();
@@ -42,9 +45,8 @@ public class QuestionActivity extends AppCompatActivity {
             array.add(i, mlist.get(randomNumber));
         }
         textView.setText(String.valueOf(randomNumber));
+        textView.setText(array.get(0).question);
 
-
-        setDummyDate();
         /*
             ほりー参上！！！
             w(￣▽￣;)wﾜｵｯ!!
@@ -180,13 +182,8 @@ public class QuestionActivity extends AppCompatActivity {
         Question question63 = new Question("村","village");
         question63.save();
 
-
-
-
-
-
-
-
+    }
+    public void complete(View v){
 
     }
 }
