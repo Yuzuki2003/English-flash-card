@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,10 +20,13 @@ import java.util.Random;
  */
 public class QuestionActivity extends AppCompatActivity {
     TextView textView;
+    EditText edittext;
     Random random = new Random();
     MyListAdapter mAdapter;
     ListView mListView;
     int randomNumber;
+
+    List<Question> array;
 
 
     // はじめてのコメント
@@ -38,7 +43,7 @@ public class QuestionActivity extends AppCompatActivity {
         mAdapter = new MyListAdapter(getApplicationContext(), R.layout.question_list_item);
         mAdapter.addAll(mlist);
 
-        List<Question> array = new ArrayList<Question>();
+        array = new ArrayList<Question>();
 
         for(int i = 0; i <= 9; i = i+1) {
             randomNumber = random.nextInt(mlist.size());
@@ -47,11 +52,27 @@ public class QuestionActivity extends AppCompatActivity {
         textView.setText(String.valueOf(randomNumber));
         textView.setText(array.get(0).question);
 
+        String englishString = array.get(0).answer;
+        edittext = (EditText)findViewById(R.id.editText);
+        String editString = edittext.getText().toString();
+        findViewById(R.id.button9);
         /*
             ほりー参上！！！
             w(￣▽￣;)wﾜｵｯ!!
          */
         //ﾔﾚﾔﾚ ┐(´ｰ｀)┌
+    }
+    public void complete(View v){
+        edittext.getText().toString();
+        String editString = edittext.getText().toString();
+        String eigoString= array.get(0).answer;
+        if (eigoString.equals(editString)){
+            Toast.makeText(this,"Equal",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(this,"batu",Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     public void setDummyDate(){
@@ -181,9 +202,6 @@ public class QuestionActivity extends AppCompatActivity {
         question62.save();
         Question question63 = new Question("村","village");
         question63.save();
-
-    }
-    public void complete(View v){
 
     }
 }
