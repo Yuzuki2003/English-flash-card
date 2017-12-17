@@ -19,25 +19,31 @@ import java.util.Random;
  * Created by minami on 2017/02/19.
  */
 public class QuestionActivity extends AppCompatActivity {
+    private static final int EIGO_COUNT = 10;
+
     TextView textView;
     EditText edittext;
     Random random = new Random();
     MyListAdapter mAdapter;
     ListView mListView;
     int randomNumber;
+    int[] questions;
 
     List<Question> array;
 
+    int seikai = 0;
+    int matigai = 0;
+    int answercount = 0;
 
-    // はじめてのコメント
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
         textView =  (TextView)findViewById(R.id.textView);
-
         setDummyDate();
+
+        questions = new int [EIGO_COUNT];
 
         List<Question> mlist = Question.listAll(Question.class);
         mAdapter = new MyListAdapter(getApplicationContext(), R.layout.question_list_item);
@@ -45,14 +51,14 @@ public class QuestionActivity extends AppCompatActivity {
 
         array = new ArrayList<Question>();
 
-        for(int i = 0; i <= 9; i = i+1) {
+        for(int i = 0; i < EIGO_COUNT; i = i+1) {
             randomNumber = random.nextInt(mlist.size());
             array.add(i, mlist.get(randomNumber));
         }
         textView.setText(String.valueOf(randomNumber));
-        textView.setText(array.get(0).question);
+        textView.setText(array.get(answercount).question);
 
-        String englishString = array.get(0).answer;
+        String englishString = array.get(answercount).answer;
         edittext = (EditText)findViewById(R.id.editText);
         String editString = edittext.getText().toString();
         findViewById(R.id.button9);
@@ -65,14 +71,27 @@ public class QuestionActivity extends AppCompatActivity {
     public void complete(View v){
         edittext.getText().toString();
         String editString = edittext.getText().toString();
-        String eigoString= array.get(0).answer;
+        String eigoString= array.get(answercount).answer;
+        if (editString.length() == 0){
+            Toast.makeText(this,"答えを書いてください",Toast.LENGTH_SHORT).show();
+            return;
+        }
         if (eigoString.equals(editString)){
-            Toast.makeText(this,"Equal",Toast.LENGTH_SHORT).show();
+            seikai = seikai+1;
         }
         else{
-            Toast.makeText(this,"batu",Toast.LENGTH_SHORT).show();
+            matigai = matigai+1;
         }
 
+        answercount++;
+        if (answercount == EIGO_COUNT){
+            //ここに結果発表画面に移動するコードを書く
+        }
+        else {
+            //まだ終わってななら次の問題に行く
+            textView.setText(array.get(answercount).question);
+            edittext.getText().clear();
+        }
     }
 
     public void setDummyDate(){
@@ -204,5 +223,7 @@ public class QuestionActivity extends AppCompatActivity {
         question63.save();
 
     }
+
+
 }
 
