@@ -19,7 +19,7 @@
         android:layout_alignParentStart="true">
 
         <Button
-            android:text="単語"
+            android:text="中学一年生"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="46dp"
@@ -30,7 +30,7 @@
             android:onClick="button" />
 
         <Button
-            android:text="現在形"
+            android:text="中学二年生"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button2"
@@ -40,23 +40,13 @@
             android:textSize="40sp" />
 
         <Button
-            android:text="現在進行形"
+            android:text="中学三年生"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
             android:layout_below="@+id/button2"
             android:layout_alignLeft="@+id/button2"
             android:layout_alignStart="@+id/button2"
-            android:textSize="40sp" />
-
-        <Button
-            android:text="過去形"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button4"
-            android:layout_below="@+id/button3"
-            android:layout_alignLeft="@+id/button3"
-            android:layout_alignStart="@+id/button3"
             android:textSize="40sp" />
 
     </LinearLayout>

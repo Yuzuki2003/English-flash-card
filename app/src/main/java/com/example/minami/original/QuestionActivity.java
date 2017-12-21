@@ -1,5 +1,6 @@
 package com.example.minami.original;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -86,6 +87,8 @@ public class QuestionActivity extends AppCompatActivity {
         answercount++;
         if (answercount == EIGO_COUNT){
             //ここに結果発表画面に移動するコードを書く
+            Intent intent = new Intent(this, ResultActivity.class);
+            startActivity(intent);
         }
         else {
             //まだ終わってななら次の問題に行く
