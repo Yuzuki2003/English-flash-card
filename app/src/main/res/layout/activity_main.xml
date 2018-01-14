@@ -19,7 +19,7 @@
         android:layout_alignParentStart="true">
 
         <Button
-            android:text="中学一年生"
+            android:text="英検5級"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="46dp"
@@ -30,7 +30,7 @@
             android:onClick="button" />
 
         <Button
-            android:text="中学二年生"
+            android:text="英検4級"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button2"
@@ -40,7 +40,7 @@
             android:textSize="40sp" />
 
         <Button
-            android:text="中学三年生"
+            android:text="英検3級"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
