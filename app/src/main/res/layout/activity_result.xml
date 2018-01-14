@@ -11,11 +11,11 @@
     tools:context="com.example.minami.original.ResultActivity">
 
     <TextView
-        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="95dp"
-        android:id="@+id/textView3" />
+        android:id="@+id/result"
+        android:textSize="50sp" />
 </RelativeLayout>
