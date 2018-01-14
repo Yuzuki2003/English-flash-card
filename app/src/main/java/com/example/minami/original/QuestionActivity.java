@@ -88,7 +88,9 @@ public class QuestionActivity extends AppCompatActivity {
         if (answercount == EIGO_COUNT){
             //ここに結果発表画面に移動するコードを書く
             Intent intent = new Intent(this, ResultActivity.class);
+            intent.putExtra("DATE1",seikai);
             startActivity(intent);
+
         }
         else {
             //まだ終わってななら次の問題に行く

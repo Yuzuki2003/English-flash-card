@@ -14,40 +14,69 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:weightSum="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <Button
-            android:text="英検5級"
+            android:text="5級"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="46dp"
             android:id="@+id/button"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:textSize="40sp"
+            android:textSize="36sp"
             android:onClick="button" />
 
         <Button
-            android:text="英検4級"
+            android:text="4級"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button2"
             android:layout_below="@+id/button"
             android:layout_alignLeft="@+id/button"
             android:layout_alignStart="@+id/button"
-            android:textSize="40sp" />
+            android:textSize="36sp" />
 
         <Button
-            android:text="英検3級"
+            android:text="3級"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
             android:layout_below="@+id/button2"
             android:layout_alignLeft="@+id/button2"
             android:layout_alignStart="@+id/button2"
-            android:textSize="40sp" />
+            android:textSize="36sp" />
+
+        <Button
+            android:text="準2級"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:textSize="36sp" />
+
+        <Button
+            android:text="2級"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button6"
+            android:textSize="36sp" />
+
+        <Button
+            android:text="準1級"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button7"
+            android:textSize="36sp" />
+
+        <Button
+            android:text="1級"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button8"
+            android:textSize="36sp" />
 
     </LinearLayout>
 
