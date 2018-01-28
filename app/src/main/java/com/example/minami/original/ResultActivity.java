@@ -24,7 +24,9 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.back).setOnClickListener(this);
     }
 
-    public void onClick(View v){
 
+    public void onClick(View v){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 }
