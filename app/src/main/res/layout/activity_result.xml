@@ -18,4 +18,13 @@
         android:layout_marginTop="95dp"
         android:id="@+id/result"
         android:textSize="50sp" />
+
+    <Button
+        android:text="戻る"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="118dp"
+        android:id="@+id/back" />
 </RelativeLayout>

@@ -3,9 +3,10 @@ package com.example.minami.original;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
-public class ResultActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity implements View.OnClickListener{
 
     int seikai = 0;
     TextView result;
@@ -19,6 +20,11 @@ public class ResultActivity extends AppCompatActivity {
 
         result = (TextView)findViewById(R.id.result);
         result.setText(seikai + "/10");
+
+        findViewById(R.id.back).setOnClickListener(this);
     }
 
+    public void onClick(View v){
+
+    }
 }
