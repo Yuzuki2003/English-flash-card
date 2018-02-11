@@ -23,8 +23,22 @@
         android:text="戻る"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:id="@+id/back"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="118dp"
-        android:id="@+id/back" />
+        android:layout_toLeftOf="@+id/result"
+        android:layout_toStartOf="@+id/result"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/back"
+        android:layout_toRightOf="@+id/result"
+        android:layout_toEndOf="@+id/result"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:id="@+id/continue_question"
+        android:text="コンテニュー" />
 </RelativeLayout>

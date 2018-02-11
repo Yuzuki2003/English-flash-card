@@ -40,7 +40,7 @@
         <Button
             android:text="完了"
             android:layout_width="wrap_content"
-            android:id="@+id/complete"
+            android:id="@+id/button9"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="100dp"

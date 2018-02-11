@@ -25,10 +25,40 @@ public class MainActivity extends AppCompatActivity {
         // str1 = list.get(1)
 
     }
+    public void eiken1 (View v) {
+        Intent intent = new Intent(this, Firstgrade.class);
+        startActivity(intent);
+    }
 
+    public void eikenzyun1 (View v) {
+        Intent intent = new Intent(this, Prefirstgrade.class);
+        startActivity(intent);
+    }
 
-    public void button (View v) {
+    public void eiken2 (View v) {
+        Intent intent = new Intent(this, Secondgrade.class);
+        startActivity(intent);
+    }
+
+    public void eikenzyun2 (View v) {
+        Intent intent = new Intent(this, Presecondgrade.class);
+        startActivity(intent);
+    }
+
+    public void eiken3 (View v) {
+        Intent intent = new Intent(this, TertiaryActivity.class);
+        startActivity(intent);
+    }
+
+    public void eiken4 (View v){
+        Intent intent = new Intent(this,QuaternaryActivity.class);
+        startActivity(intent);
+    }
+
+    public void eiken5 (View v) {
         Intent intent = new Intent(this, QuestionActivity.class);
         startActivity(intent);
     }
+
+
 }
